@@ -21,9 +21,12 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  snapshot_carousel:
+    path: ../snapshot_carousel
   flutter:
     sdk: flutter
 
+  device_apps: ^2.1.1
   google_nav_bar: ^5.0.5
   line_icons: ^2.0.1
 
