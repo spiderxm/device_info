@@ -33,6 +33,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   mobile_number: ^1.0.4
   device_info: ^2.0.0
+  font_awesome_flutter: ^9.0.0
+  url_launcher: ^6.0.3
+  google_fonts: ^2.1.0
 
 
 dev_dependencies:

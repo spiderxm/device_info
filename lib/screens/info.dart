@@ -33,7 +33,6 @@ class _InfoScreenState extends State<InfoScreen> {
 
   @override
   Widget build(BuildContext context) {
-    print(_androidDeviceInfo.systemFeatures);
 
     return loading == true
         ? Container(

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:battery/battery.dart';
+import 'package:line_icons/line_icons.dart';
 
 class BatteryDetailsScreen extends StatefulWidget {
   @override
@@ -71,9 +72,24 @@ class _BatteryDetailsScreenState extends State<BatteryDetailsScreen> {
                       color: Colors.white),
                 ),
               ),
-              SizedBox(
-                height: 30,
-              ),
+              if (batteryLevel == 100)
+                Icon(
+                  Icons.battery_full_outlined,
+                  color: Colors.black,
+                  size: 100,
+                ),
+              if (batteryLevel < 100 && batteryLevel > 20)
+                Icon(
+                  Icons.battery_charging_full,
+                  color: Colors.black,
+                  size: 100,
+                ),
+              if (batteryLevel < 20)
+                Icon(
+                  Icons.battery_alert,
+                  color: Colors.red,
+                  size: 100,
+                ),
               if (status.toString().split(".").length >= 2)
                 Container(
                   decoration: BoxDecoration(

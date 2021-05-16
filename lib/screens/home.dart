@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:info/models/CategoryItem.dart';
 import 'package:info/screens/battery.dart';
+import 'package:info/screens/developer.dart';
 import 'package:info/screens/info.dart';
-import 'package:info/screens/sensors.dart';
+import 'package:info/screens/features.dart';
 import 'package:info/screens/apps.dart';
 import 'package:info/screens/sim.dart';
 import 'package:info/widgets/category.dart';
@@ -27,6 +28,8 @@ class _HomeScreenState extends State<HomeScreen> {
     new CategoryItem("Apps", LineIcons.googlePlay),
     new CategoryItem("Sim", LineIcons.simCard),
     new CategoryItem("Battery", LineIcons.battery34Full),
+    new CategoryItem("Features", Icons.details),
+    new CategoryItem("Developer", Icons.code),
   ];
 
   List<Widget> children = [
@@ -34,6 +37,8 @@ class _HomeScreenState extends State<HomeScreen> {
     AllAppsScreen(),
     SimDetailScreen(),
     BatteryDetailsScreen(),
+    FeaturesDetailsScreen(),
+    DeveloperScreen()
   ];
 
   @override
