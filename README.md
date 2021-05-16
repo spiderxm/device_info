@@ -1,16 +1,81 @@
-# info
+# Device Info
+A mobile application built for android using dart and flutter used to view device details, battery, apps, sim details and many more.
 
-Device Info Application
+## How to Use 
 
-## Getting Started
+**Step 1:**
 
-This project is a starting point for a Flutter application.
+Download or clone this repo by using the link below:
 
-A few resources to get you started if this is your first Flutter project:
+```
+https://github.com/spiderxm/device_info.git
+```
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+**Step 2:**
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Go to project root and execute the following command in console to get the required dependencies: 
+
+```
+flutter pub get 
+```
+
+**Step 3:**
+
+```
+flutter run lib/main.dart
+```
+
+## Features:
+
+* Device Info
+* Installed Applications
+* Battery and its state
+* Sim Details
+* Device features 
+
+
+### Up-Coming Features:
+
+* Connectivity Status
+
+
+### Folder Structure
+Here is the core folder structure which flutter provides.
+
+```
+flutter-app/
+|- android
+|- build
+|- ios
+|- lib
+```
+
+Here is the folder structure we have been using in this project
+
+```
+lib/
+|- models/
+|- screens/
+|- widgets/
+|- main.dart
+```
+
+# Screenshots
+<img src="docs/images/1.jpeg" width="45%"></img>
+<img src="docs/images/2.jpeg" width="45%"></img>
+<img src="docs/images/3.jpeg" width="45%"></img>
+<img src="docs/images/4.jpeg" width="45%"></img>
+<img src="docs/images/5.jpeg" width="45%"></img>
+
+## License
+
+<!-- Distributed under the MIT License. See `LICENSE` for more information. -->
+Code copyright 2021 the authors. Code released under the MIT License.
+
+
+## Contact
+
+
+Mrigank Anand - [linkedIn/mrigankanand](https://www.linkedin.com/in/mrigankanand) - mrigank.anand52@gmail.com
+
+Project Link: [Github](https://github.com/spiderxm/device_info)
