@@ -32,6 +32,8 @@ dependencies:
   battery: ^2.0.1
   cupertino_icons: ^1.0.2
   mobile_number: ^1.0.4
+  device_info: ^2.0.0
+
 
 dev_dependencies:
   flutter_test:

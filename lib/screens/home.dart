@@ -24,18 +24,16 @@ class _HomeScreenState extends State<HomeScreen> {
 
   List<CategoryItem> categoryItems = [
     new CategoryItem("Info", LineIcons.info),
-    new CategoryItem("Battery", LineIcons.battery34Full),
     new CategoryItem("Apps", LineIcons.googlePlay),
-    new CategoryItem("Sensor", LineIcons.microchip),
-    new CategoryItem("Sim", LineIcons.simCard)
+    new CategoryItem("Sim", LineIcons.simCard),
+    new CategoryItem("Battery", LineIcons.battery34Full),
   ];
 
   List<Widget> children = [
     InfoScreen(),
-    BatteryDetailsScreen(),
     AllAppsScreen(),
-    SensorDetailsScreen(),
-    SimDetailScreen()
+    SimDetailScreen(),
+    BatteryDetailsScreen(),
   ];
 
   @override

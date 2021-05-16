@@ -74,19 +74,20 @@ class _BatteryDetailsScreenState extends State<BatteryDetailsScreen> {
               SizedBox(
                 height: 30,
               ),
-              Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.black87),
-                padding: EdgeInsets.all(20),
-                child: Text(
-                  status.toString().split(".")[1].toUpperCase(),
-                  style: TextStyle(
-                      fontSize: 40,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.white),
+              if (status.toString().split(".").length >= 2)
+                Container(
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.black87),
+                  padding: EdgeInsets.all(20),
+                  child: Text(
+                    status.toString().split(".")[1].toUpperCase(),
+                    style: TextStyle(
+                        fontSize: 40,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.white),
+                  ),
                 ),
-              ),
             ],
           );
   }
