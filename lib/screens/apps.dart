@@ -8,7 +8,8 @@ class AllAppsScreen extends StatefulWidget {
   _AllAppsScreenState createState() => _AllAppsScreenState();
 }
 
-class _AllAppsScreenState extends State<AllAppsScreen> with AutomaticKeepAliveClientMixin {
+class _AllAppsScreenState extends State<AllAppsScreen>
+    with AutomaticKeepAliveClientMixin {
   bool loading;
   List apps;
 
@@ -20,6 +21,7 @@ class _AllAppsScreenState extends State<AllAppsScreen> with AutomaticKeepAliveCl
     fetchApps();
   }
 
+  /// fetches list of [apps] and updates state of the application.
   void fetchApps() async {
     setState(() {
       loading = true;

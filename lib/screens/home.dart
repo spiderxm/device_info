@@ -4,6 +4,7 @@ import 'package:info/screens/battery.dart';
 import 'package:info/screens/info.dart';
 import 'package:info/screens/sensors.dart';
 import 'package:info/screens/apps.dart';
+import 'package:info/screens/sim.dart';
 import 'package:info/widgets/category.dart';
 import 'package:line_icons/line_icons.dart';
 
@@ -25,7 +26,8 @@ class _HomeScreenState extends State<HomeScreen> {
     new CategoryItem("Info", LineIcons.info),
     new CategoryItem("Battery", LineIcons.battery34Full),
     new CategoryItem("Apps", LineIcons.googlePlay),
-    new CategoryItem("Sensor", LineIcons.microchip)
+    new CategoryItem("Sensor", LineIcons.microchip),
+    new CategoryItem("Sim", LineIcons.simCard)
   ];
 
   List<Widget> children = [
@@ -33,6 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
     BatteryDetailsScreen(),
     AllAppsScreen(),
     SensorDetailsScreen(),
+    SimDetailScreen()
   ];
 
   @override
