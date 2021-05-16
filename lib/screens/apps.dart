@@ -47,7 +47,7 @@ class _AllAppsScreenState extends State<AllAppsScreen>
               children: [
                 Center(
                     child: CupertinoActivityIndicator(
-                  radius: 16,
+                  radius: 20,
                 )),
               ],
             ))

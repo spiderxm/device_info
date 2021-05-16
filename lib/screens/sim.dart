@@ -11,6 +11,7 @@ class SimDetailScreen extends StatefulWidget {
 class _SimDetailScreenState extends State<SimDetailScreen> {
   bool loading;
   List<SimCard> simCards;
+  bool error;
 
   @override
   void initState() {
@@ -22,17 +23,29 @@ class _SimDetailScreenState extends State<SimDetailScreen> {
     setState(() {
       loading = true;
     });
-    bool permission = await MobileNumber.hasPhonePermission;
+    bool permission;
+    try {
+      permission = await MobileNumber.hasPhonePermission;
+    } catch (e) {
+      setState(() {
+        error = true;
+      });
+    }
+    print(permission);
     if (permission) {
+      print(2);
       final List<SimCard> simCards = await MobileNumber.getSimCards;
       setState(() {
         this.simCards = simCards;
       });
     } else {
       await MobileNumber.requestPhonePermission;
-      fetchAndSetSimCards();
+      final List<SimCard> simCards = await MobileNumber.getSimCards;
+      setState(() {
+        this.simCards = simCards;
+      });
+      print(simCards);
     }
-
     setState(() {
       loading = false;
     });
@@ -41,12 +54,20 @@ class _SimDetailScreenState extends State<SimDetailScreen> {
   @override
   Widget build(BuildContext context) {
     return loading == true
-        ? CupertinoActivityIndicator(
-            radius: 20,
-          )
+        ? Container(
+            height: MediaQuery.of(context).size.height * .8,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Center(
+                    child: CupertinoActivityIndicator(
+                  radius: 20,
+                )),
+              ],
+            ))
         : Container(
-      height: MediaQuery.of(context).size.height * .8,
-      child: Column(
+            height: MediaQuery.of(context).size.height * .8,
+            child: Column(
               children: [
                 Expanded(
                   child: ListView.builder(

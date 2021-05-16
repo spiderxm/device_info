@@ -29,9 +29,7 @@ dependencies:
   device_apps: ^2.1.1
   google_nav_bar: ^5.0.5
   line_icons: ^2.0.1
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
+  battery: ^2.0.1
   cupertino_icons: ^1.0.2
   mobile_number: ^1.0.4
 

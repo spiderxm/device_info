@@ -52,7 +52,8 @@ class SimCardWidget extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text("Country Phone Prefix : " + simCard.countryPhonePrefix,
+              child: Text(
+                  "Country Phone Prefix : " + simCard.countryPhonePrefix,
                   style: TextStyle(color: Colors.white, fontSize: 18)),
             )
           ],
